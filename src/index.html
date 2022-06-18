@@ -57,11 +57,11 @@
 
       <nav>
         <ul class="menu__list">
-          <li class="menu__link"><a href="#">про мене</a></li>
-          <li class="menu__link"><a href="#">мій досвід</a></li>
-          <li class="menu__link"><a href="#">мої навички</a></li>
-          <li class="menu__link"><a href="#">мої роботи</a></li>
-          <li class="menu__link"><a href="#">контакти</a></li>
+          <li class="menu__link"><a href="#aboutMyself">про мене</a></li>
+          <li class="menu__link"><a href="#resume">мій досвід</a></li>
+          <li class="menu__link"><a href="#skills">мої навички</a></li>
+          <li class="menu__link"><a href="#portfolio">мої роботи</a></li>
+          <li class="menu__link"><a href="#contacts">контакти</a></li>
         </ul>
       </nav>
 
@@ -83,13 +83,13 @@
       <div class="title title_fz16 promo__subtitle">Мене звати Артем Захарчук</div>
       <h1 class="title title_fz48 promo__title">Я JavaScript розробник - початківець</h1>
       <div class="promo__btns">
-        <a href="#" class="promo__link btn">Портфоліо</a>
-        <a href="#" class="promo__link">Про мене</a>
+        <a href="#portfolio" class="promo__link btn">Портфоліо</a>
+        <a href="#aboutMyself" class="promo__link">Про мене</a>
       </div>
       </div>
   </section>
   
-  <section class="aboutMyself">
+  <section id="aboutMyself" class="aboutMyself">
     <div class="container">
       <div class="aboutMyself__wrapper">
         <img src="img/work/photoBefore.jpg" alt="old" class="aboutMyself_photo">
@@ -144,9 +144,9 @@
     </div>
   </section>
 
-  <section class="resume">
+  <section id="resume" class="resume">
     <div class="container">
-      <h2 class="title title_fz16 resume__title">Мій досвід</h2>
+      <h2 class="title__small title_fz16">Мій досвід</h2>
       <div class="title resume__subtitle">
         Навчання, курси, робота
       </div>
@@ -176,7 +176,7 @@
                     <img src="icons/experience/07udemy.svg" alt="udemy">
                   </div>
                   <h4 class="title title_fz14">Udemy</h4>
-                  <div class="resume__item-diploma">Курси по Web-розробці, JS + React</div>
+                  <div class="resume__item-diploma">Курси по Web-розробці, JS + React (2022)</div>
                 </div>
                 <div class="resume__item-body">
                   1. Ознайомлення з існуючими редакторами, Bootstrap, Jquery. Організація роботи за допомогою БЕМ, Gulp, Grid, Flex. <br>
@@ -230,9 +230,9 @@
     </div>
   </section>
 
-  <section class="skills">
+  <section id="skills" class="skills">
     <div class="container">
-      <h2 class="title title_fz16 skills__title">Навички</h2>
+      <h2 class="title__small title_fz16">Навички</h2>
       <div class="title skills__subtitle">
         Чим користуюсь у проектах
       </div>
@@ -268,7 +268,7 @@
           <h4 class="title title_fz14">Node.js</h4>
           <div class="skills__item-descr">Станом на зараз усвідомлений тільки про те, що це бекенд</div>
         </div>
-        <div class="skills__item">
+        <div class="skills__item skills__item_last">
           <img src="icons/skills/13mongo.svg" alt="mongo" class="skills__item-icon">
           <h4 class="title title_fz14">Mongo.db</h4>
           <div class="skills__item-descr">Доповнити після проходження курсу</div>
@@ -321,11 +321,87 @@
     </div>
   </section>
 
-  <section class="portfolio">
+  <section id="portfolio" class="portfolio">
     <div class="container">
-      <h2 class="title title_fz16 portfolio__title">Портфоліо</h2>
+      <h2 class="title__small title_fz16">Портфоліо</h2>
       <div class="title portfolio__subtitle">
         Мої роботи
+      </div>
+      <div class="divider"></div>
+      <div class="portfolio__wrapper">
+        <a href="/01_HTML_1_Uber" class="porfolio__item">
+          <img src="img/work/01uber.jpg" alt="uber">
+        </a>
+        <a href="/HTML+Gulp_2_RunSmart" class="porfolio__item">
+          <img src="img/work/02pulse.jpg" alt="pulse">
+        </a>
+        <a href="#" class="porfolio__item">
+          <img src="img/work/03bread.jpg" alt="bread">
+        </a>
+        <a href="#" class="porfolio__item vertical">
+          <img src="img/work/04plans.jpg" alt="plans">
+        </a>
+        <a href="#" class="porfolio__item">
+          <img src="img/work/05ipad.jpg" alt="ipad">
+        </a>
+        <a href="#" class="porfolio__item horizontal">
+          <img src="img/work/06mac.jpg" alt="mac">
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <div class="contacts__wrapper">
+        <div class="contacts_photo">
+          <picture>
+            <source type="image/webp" srcset="img/work/photoBefore.webp">
+            <img src="img/work/photoBefore.jpg" alt="old">
+          </picture>
+        </div>
+        <div class="contacts__descr">
+          <h2 class="title title_fz16 contacts__title">Контакти</h2>
+          <div class="title contacts__subtitle">Зв'яжіться зі мною</div>
+          <div class="divider"></div>
+          <div class="title title_fz14 contacts__text">
+            Зручним для вас способом
+          </div>
+          <div class="contacts__social">
+            <a href="https://www.facebook.com/artem.zakharchuk.7/" class="contacts__link">
+              <img src="icons/social/fb_icon.svg" alt="facebook" class="contacts__social__icon">
+            </a>
+            <a href="https://www.linkedin.com/in/artem-zakharchuk-818ba3131/" class="contacts__link">
+              <img src="icons/social/link_icon.svg" alt="link" class="contacts__social__icon">
+            </a>
+          </div>
+          <div class="title title_fz14 contacts__text">
+            Або залиште свої дані
+          </div>
+
+          <form action="#" class="contacts__form">
+            <div class="contacts__input">
+              <input required type="text" name="name" id="name">
+              <label for="name">Ваше ім'я</label>
+            </div>
+            <div class="contacts__input">
+              <input required type="email" name="email" id="email">
+              <label for="email">Ваша електронна скринька</label>
+            </div>
+            <div class="contacts__textarea">
+              <textarea name="text" id="text"></textarea>
+              <label for="text">Ваше повідомлення</label>
+            </div>
+            <div class="contacts__triggers">            
+              <button class="contacts__btn btn">Відправити повідомлення</button>
+              <div class="contacts__policy">
+                <input required type="checkbox" name="checkbox">
+                <span>Я погоджуюсь з <a href="/policy.html">політикою конфіденційності</a></span>
+              </div>
+            </div>
+          </form>
+
       </div>
     </div>
   </section>
