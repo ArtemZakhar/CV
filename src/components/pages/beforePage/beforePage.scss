@@ -1,0 +1,91 @@
+.app__oldCV {
+  display: grid;
+  grid-template-columns: 300px 500px 300px;
+  grid-template-rows: 295px 20px 350px;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.ava__track { 
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.ava__track_img{
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.about_me__track {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+
+.expirience__track {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.descr__track {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.achievements__track {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
+.expirience_info__track {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.descr_info__track {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.achievements_info__track {
+  margin-top: 0.5rem;
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+span.grey {
+  color: grey;
+}
+
+.expirience_info__track .accordion-heading, p {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.expirience_info__track .accordion-heading span {
+  border-bottom: 2px dotted #333;
+}
+
+.expirience_info__track div.active-style span, .accordion-block p.active-style span { 
+  color: #17bbdb; 
+  font-weight: 700; 
+  text-decoration: none; 
+  border: 0; 
+}
+
+.accordion-block__item {
+  cursor: pointer;
+}
+/* .expirience_info__track .accordion-block {
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  overflow: hidden; 
+} */
+
+.expirience_info__track .accordion-block.active-content { 
+  overflow: visible;
+  opacity: 1;
+  margin-top: 1rem;
+}
