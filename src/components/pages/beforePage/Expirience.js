@@ -1,51 +1,43 @@
-import { Component } from 'react';
-import AppFilter from './AppFilter';
-// import Accordion from "../../Accordion";
+import List from './List';
 
-class  Expirience extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      name: 'Робота', 
-      active: false,
-      rise: false
-    }
-  }
+const  Expirience = ({active, data, onActive, onToggleRise}) => {
 
-  onActive = () => {
-    this.setState(({active, rise}) => ({
-      active: !active,
-      rise: !rise
-    }))
+  const elements = data.map(item => {
+    const {id, rise, ...ItemProps} = item;
 
-/*     this.nextElementSibling.classList.toggle('active-content');
-
-    if (this.classList.contains('active-style')) {
-      this.nextElementSibling.style.maxHeight = this.nextElementSibling.scrollHeight + 80 + 'px';
-    } else {
-      this.nextElementSibling.style.maxHeight = '0px';
-    } */
-  }
-  // const {filter} = props;
-
-  render () {
-    const {name, active, rise} = this.state;
-    const {onAccordion, data} = this.props;
-    let classNames = 'accordion-heading';
-    if (active) {
-      classNames += ' active-style';
-    }
     return (
-      <div className="expirience_info__track">
-          <div className={classNames}>
-            <span onClick={this.onActive}>{name}</span>
-          </div>
-          <AppFilter rise={rise} 
-          onAccordion={onAccordion(data.id)}
-          data={data}/>
-      </div>
+
+      <List 
+      key={id}
+      {...ItemProps}
+      rise={rise}
+      onToggleRise={() => onToggleRise(id)}/>
     )
+  })
+
+  let classNameforJob = 'accordion-heading';
+  if (active) {
+    classNameforJob += ' active-style';
   }
+
+
+  let classNameForList = 'accordion-block-content';
+  if (active) {
+    classNameForList = 'accordion-block-content__active';
+  }
+
+
+  return (
+    <div className="expirience_info__track">
+        <div className={classNameforJob}>
+          <span onClick={onActive}>Робота</span>
+        </div>
+        <div className={classNameForList}
+        style={active ? {maxHeight: '80px'} : {maxHeight: '0'}}>
+          {elements}
+        </div>
+    </div>
+  )
 }
 
 export default Expirience;

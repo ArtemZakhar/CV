@@ -51,6 +51,8 @@
   margin-top: 0.5rem;
   grid-column: 3/4;
   grid-row: 3/4;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 span.grey {
@@ -77,14 +79,15 @@ span.grey {
 .accordion-block__item {
   cursor: pointer;
 }
-/* .expirience_info__track .accordion-block {
+
+.accordion-block-content {
   max-height: 0;
   opacity: 0;
   transition: all 0.3s ease-out;
   overflow: hidden; 
-} */
+}
 
-.expirience_info__track .accordion-block.active-content { 
+.accordion-block-content__active { 
   overflow: visible;
   opacity: 1;
   margin-top: 1rem;

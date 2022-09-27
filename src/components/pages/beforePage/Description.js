@@ -1,16 +1,34 @@
 import WorkList from './WorkList';
 
-const Description = ({data}) => {
-  const elements = data.map(item => {
+const Description = ({active, data}) => {
+  
+  const elements = data.map((item, i) => {
+    const {id, rise, name, achievements, ...itemProps} = item;
+    
+    const workStyle = {
+      display: rise && active ? "block" : "none"
+    }
+
     return (
-      <WorkList key={item.id} {...item}/>
+      <>
+        <div 
+          key={id}
+          style={workStyle}>
+          <WorkList {...itemProps}/>
+        </div>
+        <div className="achievements_info__track"
+          key={i}
+          style={workStyle}>
+          <span>{achievements}</span>
+        </div>
+      </>
     )
   })
   
   return (
-    <div>
+    <>
       {elements}
-    </div>
+    </>
   )
   
 }
