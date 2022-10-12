@@ -1,8 +1,11 @@
+import { useId } from 'react';
+
 import WorkList from './WorkList';
 
 const Description = ({active, data}) => {
-  
-  const elements = data.map((item, i) => {
+  const idForAch = useId();
+
+  const elements = data.map((item) => {
     const {id, rise, name, achievements, ...itemProps} = item;
     
     const workStyle = {
@@ -17,7 +20,7 @@ const Description = ({active, data}) => {
           <WorkList {...itemProps}/>
         </div>
         <div className="achievements_info__track"
-          key={i}
+          key={idForAch}
           style={workStyle}>
           <span>{achievements}</span>
         </div>
