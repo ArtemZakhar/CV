@@ -2,19 +2,23 @@ import { useId } from 'react';
 
 import WorkList from './WorkList';
 
-const Description = ({active, data}) => {
+const Description = ({active, jobInfo}) => {
   const idForAch = useId();
-
-  const elements = data.map((item) => {
-    const {id, rise, name, achievements, ...itemProps} = item;
+  
+  const elements = jobInfo.map(item => {
+    const {id, rise, achievements, ...itemProps} = item;
     
     const workStyle = {
       display: rise && active ? "block" : "none"
     }
 
+    const viewAchivments = achievements.map((item) =>
+        <li>{item}</li> 
+    )
+
     return (
       <>
-        <div 
+        <div className='descr_info__track'
           key={id}
           style={workStyle}>
           <WorkList {...itemProps}/>
@@ -22,7 +26,7 @@ const Description = ({active, data}) => {
         <div className="achievements_info__track"
           key={idForAch}
           style={workStyle}>
-          <span>{achievements}</span>
+          <ul>{viewAchivments}</ul>
         </div>
       </>
     )

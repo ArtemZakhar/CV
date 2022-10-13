@@ -5,6 +5,7 @@ import Spinner from './../spinner/Spinner';
 const AppHeader = lazy(() => import ("../appHeader/AppHeader"));
 const MainPage = lazy(() => import ("../pages/MainPage"));
 const BeforePage = lazy(() => import ('../pages/BeforePage'));
+const AfterPage = lazy(() => import ('../pages/AfterPage'));
 const Page404 = lazy(() => import('../pages/404'));
 
 const App = () => {
@@ -18,7 +19,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<MainPage/>}/>
               <Route path='/before' element={<BeforePage/>}/>
-
+              <Route path='/after' element={<AfterPage/>}/>
               <Route path='*' element={<Page404/>}/>
             </Routes>
           </Suspense>

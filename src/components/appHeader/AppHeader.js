@@ -30,7 +30,7 @@ const AppHeader = () => {
             <a href="eng"><img src={eng} alt="eng_language" className="icon"/></a>
           </div>
           <div className="item">
-            <a href="ua"><img src={ua} alt="ua_language" className="icon"/></a>
+            <a href="\"><img src={ua} alt="ua_language" className="icon"/></a>
           </div>
         </div>
     </header>

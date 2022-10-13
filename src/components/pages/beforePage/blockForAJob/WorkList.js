@@ -1,7 +1,11 @@
 const Worklist = (props) => {
 
+  const viewDuties = props.duties.map((item) => 
+    <li>{item}</li>
+  )
+
   return (
-   <div className='descr_info__track'>
+   <>
         <h2>
           {props.terms}<br/>{props.time}
         </h2>
@@ -14,13 +18,10 @@ const Worklist = (props) => {
         <h2>{props.position}</h2>
         <span>
           <ul className="ulList">
-            <li>* {props.duties[0]}</li>
-            <li>* {props.duties[1]}</li>
-            <li>* {props.duties[2]}</li>
-            <li>* {props.duties[3]}</li>
+            {viewDuties}
           </ul>
         </span>
-    </div>
+    </>
   )
 }
 

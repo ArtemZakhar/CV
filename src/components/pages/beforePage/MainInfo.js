@@ -1,6 +1,7 @@
 import oldAva from "./img/baby.jpg";
 
 const MainInfo = () => {
+
   return (
     <>
       <div className="ava__track">
@@ -12,7 +13,8 @@ const MainInfo = () => {
         +380503899090 <span className="grey">(бажаний спосіб зв'язку)</span><br/>
         artemzakharchuk@gmail.com <br/><br/>
         місце проживання: Київ <br/>
-        громадянство: Україна <br/>
+        громадянство: Україна <br/><br/>
+        В різний час цікавився: футболом (грав напівпрофесійно), настільним тенісом,<br/> боксом, волейболом, рафтингом (зокрема і гірським)
       </div>
       <div className="expirience__track">Досвід</div>
       <div className="descr__track">Детальна інформація</div>

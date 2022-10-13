@@ -1,10 +1,9 @@
 import List from './List';
 
-const  Expirience = ({active, data, onActive, onToggleRise}) => {
-
-  const elements = data.map(item => {
+const  Expirience = ({active, jobInfo, onActive, onToggleRise}) => {
+  const elements = jobInfo.map(item => {
     const {id, rise, ...ItemProps} = item;
-
+    
     return (
 
       <List 

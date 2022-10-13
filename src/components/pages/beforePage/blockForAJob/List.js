@@ -1,5 +1,3 @@
-
-
 const List = ({name, rise, onToggleRise}) => {
 
   
