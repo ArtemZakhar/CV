@@ -5,7 +5,7 @@ const MainInfo = () => {
   return (
     <>
       <div className="ava__track">
-      <img className="ava__track_img" src={newAva} alt="newMe"/>
+      <img className="ava__track_img2" src={newAva} alt="newMe"/>
       </div>
       <div className="about_me__track">
         Захарчук Артем Вадимович <br/>

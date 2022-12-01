@@ -24,8 +24,6 @@ const ProjectList = () => {
  
     const dispatch = useDispatch();
 
-
-
     useEffect(() => {
         dispatch(fetchProjects());
   
