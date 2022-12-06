@@ -11,7 +11,7 @@ export const fetchProjects = createAsyncThunk(
   'projects/fetchProjects',
   () => {
     const {request} = useHttp();
-    return request("http://localhost:3001/portfolio")
+    return request("https://jagged-elated-penguin.glitch.me/portfolio")
   }
 );
 

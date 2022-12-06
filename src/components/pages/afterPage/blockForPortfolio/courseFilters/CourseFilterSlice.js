@@ -11,7 +11,7 @@ export const filtersFetch = createAsyncThunk(
   'filters/filtersFetch',
   () => {
     const {request} = useHttp();
-    return request("http://localhost:3001/filters")
+    return request("https://jagged-elated-penguin.glitch.me/filters")
   }
 );
 
