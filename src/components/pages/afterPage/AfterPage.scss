@@ -86,7 +86,7 @@
   font-weight: 500;
   span {
     font-size: 20px;
-  font-weight: 700;
+    font-weight: 700;
   }
   :first-child {
     margin-bottom: 30px;
@@ -104,60 +104,12 @@
 }
 
 
-
-
-
-
-
-
-/* 
-
-.expirience_study_info__track {
-  margin-top: 0;
-  grid-column: 1/2;
-  grid-row: 4/5;
+.nextPage {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 75px;
+  div {
+    font-size: 15px;
+  }
 }
-
-.descr_study_info__track {
-  margin-top: 45px;
-  grid-column: 2/3;
-  grid-row: 4/5;
-}
-
-.achievements_study_info__track {
-  margin-top: 45px;
-  grid-column: 3/4;
-  grid-row: 4/5;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-span.grey {
-  color: grey;
-}
-
-.expirience_info__track div.active-style span, .accordion-block p.active-style span, .expirience_study_info__track div.active-style span { 
-  color: #17bbdb; 
-  font-weight: 700; 
-  text-decoration: none; 
-  border: 0; 
-}
-
-.accordion-block__item {
-  margin-top: 5px;
-  font-size: 22px;
-  cursor: pointer;
-}
-
-.accordion-block-content {
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.3s ease-out;
-  overflow: hidden; 
-}
-
-.accordion-block-content__active { 
-  overflow: visible;
-  opacity: 1;
-  margin-top: 1rem;
-} */

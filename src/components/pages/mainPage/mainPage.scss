@@ -1,8 +1,4 @@
-@mixin btn_hover {
-	&:not([disabled]):hover {
-		background-color: #17bbdb;
-  }
-}
+@import "./mixin";
 
 .mainBtns {
   margin-top: 150px;
@@ -39,12 +35,3 @@
   margin-left: 20px;
 }
 
-.nextPage {
-  display: block;
-  margin: 0 auto;
-  width: 250px;
-  height: 75px;
-  div {
-    font-size: 15px;
-  }
-}

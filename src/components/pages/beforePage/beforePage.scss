@@ -52,6 +52,10 @@
   margin-top: 45px;
   grid-column: 2/3;
   grid-row: 3/4;
+  h2 {
+    font-size: 18;
+    font-weight: 700;
+  }
 }
 
 .achievements_info__track {
@@ -117,4 +121,14 @@ span.grey {
   overflow: visible;
   opacity: 1;
   margin-top: 1rem;
+}
+
+.nextPage {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 75px;
+  div {
+    font-size: 15px;
+  }
 }

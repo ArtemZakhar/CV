@@ -21,7 +21,7 @@ const AfterPage = () => {
         </div>
       </div>
 
-      <Link to={`/before`} className="btn afterBtn nextPage">
+      <Link to={`/before`} className="btn nextPage">
         <div>Частина життя <br/> до JavaScript</div>
       </Link>
     </div>
