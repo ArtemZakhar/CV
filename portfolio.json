@@ -98,6 +98,15 @@
       "githubLink": "https://github.com/ArtemZakhar/portfolio/tree/main/Udemy/JS%2BReact(works%20only%20through%20OpenServer%20or%20npm)/04_heroes_via_redux",
       "gDiskLink": "https://drive.google.com/drive/u/0/folders/1em4TaHdkWtmD0iRWPVFGPqRon8KZt19R",
       "image": "https://drscdn.500px.org/photo/1055515431/m%3D900/v2?sig=3bcea8d2d4d9e4b2c47899bf7a2035c238cdc573a0ebc4ba6359a6f4d5947a36"
+    },
+    {
+      "id": "12",
+      "name": "Childhood",
+      "description": "Повністю готовий сайт (landing-page) саджаємо на WordPress і перетворюємо його на багатосторінковий. В процесі: створили власну тему, навчились взаємодіяти з плагінами для WP, створили повноцінний продукт для замовника, який він зможе налаштовувати під власні потреби",
+      "course": "WordPress",
+      "githubLink": "https://github.com/ArtemZakhar/portfolio/tree/main/Udemy/WordPress/childhood",
+      "gDiskLink": "https://drive.google.com/drive/u/0/folders/1taWfuFTKUNDaB2TuHwPMfGo6wNZ0oMsF",
+      "image": "https://drscdn.500px.org/photo/1058506451/m%3D900/v2?sig=b232bcacd191c81d6068fb56aa24129b3eeb92d1df57df7a057db0d2b0e8fb60"
     }
   ],
   "filters": [
@@ -120,6 +129,12 @@
       "id": "JS+React",
       "description": "Ознайомлення з бібліотекою React і все, що з нею пов'язано (в тому числі і Redux). Практика створення повноцінних веб-застосунків",
       "label": "JS+React"
+    }
+    ,
+    {
+      "id": "WordPress",
+      "description": "Практичний курс в якому в загальних рисах представлено: поняття систем керування сайтами, налаштування та встановлення WordPress на локальному сервері та створення повноцінно функціонуючих та повністю настроюваних продуктів.",
+      "label": "WordPress"
     }
   ]
 }
