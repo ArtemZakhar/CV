@@ -18,7 +18,7 @@ export const fetchProjects = createAsyncThunk(
     const {
       request
     } = useHttp();
-    return request("https://jagged-elated-penguin.glitch.me/portfolio")
+    return request("https://cvjson.azurewebsites.net/portfolio")
   }
 );
 

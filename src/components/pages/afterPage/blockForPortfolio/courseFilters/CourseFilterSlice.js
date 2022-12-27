@@ -18,7 +18,7 @@ export const filtersFetch = createAsyncThunk(
     const {
       request
     } = useHttp();
-    return request("https://jagged-elated-penguin.glitch.me/filters")
+    return request("https://cvjson.azurewebsites.net/filters")
   }
 );
 
