@@ -1,5 +1,10 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { useHttp } from '../hook/http.hook';
+import {
+  createSlice,
+  createAsyncThunk
+} from "@reduxjs/toolkit";
+import {
+  useHttp
+} from '../hook/http.hook';
 
 const initialState = {
   projects: [],
@@ -10,8 +15,10 @@ const initialState = {
 export const fetchProjects = createAsyncThunk(
   'projects/fetchProjects',
   () => {
-    const {request} = useHttp();
-    return request("https://jagged-elated-penguin.glitch.me/portfolio")
+    const {
+      request
+    } = useHttp();
+    return request("https://glitch.com/edit/#!/jagged-elated-penguin/portfolio")
   }
 );
 
@@ -25,17 +32,24 @@ const projectsSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(fetchProjects.pending, state => {state.projectsLoadingStatus = 'loading'})
+      .addCase(fetchProjects.pending, state => {
+        state.projectsLoadingStatus = 'loading'
+      })
       .addCase(fetchProjects.fulfilled, (state, action) => {
         state.projectsLoadingStatus = 'idle';
         state.projects = action.payload;
       })
-      .addCase(fetchProjects.rejected, state => {state.projectsLoadingStatus = 'error'})
+      .addCase(fetchProjects.rejected, state => {
+        state.projectsLoadingStatus = 'error'
+      })
       .addDefaultCase(() => {})
   }
 });
 
-const {actions, reducer} = projectsSlice;
+const {
+  actions,
+  reducer
+} = projectsSlice;
 
 export default reducer;
 export const {
