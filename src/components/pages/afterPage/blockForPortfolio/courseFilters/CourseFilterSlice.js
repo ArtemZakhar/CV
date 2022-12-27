@@ -18,7 +18,7 @@ export const filtersFetch = createAsyncThunk(
     const {
       request
     } = useHttp();
-    return request("https://glitch.com/edit/#!/jagged-elated-penguin/filters")
+    return request("https://jagged-elated-penguin.glitch.me/filters")
   }
 );
 
