@@ -1,57 +1,42 @@
-import {
-  createSlice,
-  createAsyncThunk
-} from "@reduxjs/toolkit";
-import {
-  useHttp
-} from '../hook/http.hook';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { useHttp } from "../hook/http.hook";
 
 const initialState = {
   filters: [],
-  filtersLoadingStatus: 'idle',
-  activeFilter: 'Udemy'
-}
+  filtersLoadingStatus: "idle",
+  activeFilter: "Udemy",
+};
 
-export const filtersFetch = createAsyncThunk(
-  'filters/filtersFetch',
-  () => {
-    const {
-      request
-    } = useHttp();
-    return request("https://cvjson.azurewebsites.net/filters")
-  }
-);
+export const filtersFetch = createAsyncThunk("filters/filtersFetch", () => {
+  const { request } = useHttp();
+  return request("https://jagged-elated-penguin.glitch.me/filters");
+});
 
 const filtersSlice = createSlice({
-  name: 'filters',
+  name: "filters",
   initialState,
   reducers: {
     activeFilterChanged: (state, action) => {
       state.activeFilter = action.payload;
-    }
+    },
   },
-  extraReducers: builder => {
+  extraReducers: (builder) => {
     builder
-      .addCase(filtersFetch.pending, state => {
-        state.filtersLoadingStatus = 'loading'
+      .addCase(filtersFetch.pending, (state) => {
+        state.filtersLoadingStatus = "loading";
       })
       .addCase(filtersFetch.fulfilled, (state, action) => {
-        state.filtersLoadingStatus = 'idle';
+        state.filtersLoadingStatus = "idle";
         state.filters = action.payload;
       })
-      .addCase(filtersFetch.rejected, state => {
-        state.filtersLoadingStatus = 'error'
+      .addCase(filtersFetch.rejected, (state) => {
+        state.filtersLoadingStatus = "error";
       })
-      .addDefaultCase(() => {})
-  }
+      .addDefaultCase(() => {});
+  },
 });
 
-const {
-  actions,
-  reducer
-} = filtersSlice;
+const { actions, reducer } = filtersSlice;
 
 export default reducer;
-export const {
-  activeFilterChanged
-} = actions;
+export const { activeFilterChanged } = actions;
