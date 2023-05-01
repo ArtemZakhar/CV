@@ -1,0 +1,48 @@
+.app__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home__track {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link__track {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.language__track {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  :first-child {
+    margin-left: 0;
+  }
+}
+
+.item {
+  width: 30px;
+  margin-left: 10px;
+  button{
+    border: 0;
+    background: #FFF;
+  }
+}
+
+.icon {
+  width: 100%;
+}
+
+@media (max-width: 575px) {  
+  .item {
+    width: 24px;
+    margin-left: 8px;
+  }
+}

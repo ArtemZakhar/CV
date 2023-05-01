@@ -1,0 +1,429 @@
+.main__info__wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main__info__ava { 
+  width: 30vw;
+}
+
+.main__info__ava_img2 {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.main__info__descr {
+  font-size: 18px;
+  width: 40vw;
+}
+
+.main__info__headers__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2%;
+  padding-right: 10%;
+  margin-top: 50px;
+}
+
+.courses__section__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.courses__section__titles {
+  width: 20%;
+  :first-child {
+    margin-top: 45px; 
+    padding-left: 0;
+  }
+  :nth-child(7) { 
+    margin-top: 30px; 
+    padding-left: 0;
+  }
+}
+
+.courses__section__projects {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  width: 55%;
+  padding: 0 80px;
+  height: min-content;
+  img {
+    width: 220px;
+    height: 90%;
+  } 
+  div {
+    height: 220px;
+  }
+}
+
+.courses__section__titles p {
+  padding-top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
+.courses__section__titles span.active-style { 
+  color: #17bbdb; 
+  font-weight: 700; 
+  text-decoration: none; 
+  border: 0; 
+}
+
+.courses__section__projects_description {
+  margin-top: 45px;
+  width: 25%;
+  font-size: 18px;
+  font-weight: 500;
+  span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  :first-child {
+    margin-bottom: 30px;
+  }
+}
+
+.courses__item_selected {
+  box-shadow: 0 5px 20px #17bbdb;
+  transform: translateY(-8px);
+}
+
+.courses__item_clicked {
+  box-shadow: 0 5px 20px #17bbdb;
+  transform: translateY(-8px);
+}
+
+
+.nextPage {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  height: 75px;
+  margin-top: 100px;
+  div {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .courses__section__projects {
+    padding: 0 45px;
+    img {
+      width: 200px;
+    } 
+    div {
+      height: 200px;
+    }
+  }
+  .main__info__ava_img2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main__info__ava_img2 {
+    width: 90%;
+  }
+  
+  .main__info__descr {
+    font-size: 17px;
+    width: 50vw;
+  }
+  .courses__section__wrapper {
+    margin-top: 10px;
+  }
+  .courses__section__titles {
+    :first-child {
+      margin-top: 35px; 
+    }
+  }
+  
+  .courses__section__projects {
+    width: 55%;
+    padding: 0 20px;
+    img {
+      width: 190px;
+    } 
+    div {
+      height: 190px;
+    }
+  }
+  
+  .courses__section__titles p {
+    padding-top: 8px;
+    font-size: 20px;
+  }
+  
+  .courses__section__projects_description {
+    font-size: 16px;
+    span {
+      font-size: 18px;
+    }
+  }
+  .nextPage {
+    width: 240px;
+  }
+}
+@media (max-width: 991px) {
+  .main__info__ava { 
+    width: 40%;
+  }
+  
+  .main__info__ava_img2 {
+    width: 80%;
+  }
+  
+  .main__info__descr {
+    font-size: 16px;
+    width: 50%;
+  }
+  
+  .main__info__headers__wrapper {
+    padding-right: 12%;
+    margin-top: 40px;
+  }
+  
+  .courses__section__wrapper {
+    margin-top: 0;
+  }
+  
+  .courses__section__titles {
+    width: 20%;
+    :first-child {
+      margin-top: 35px; 
+    }
+  }
+  
+  .courses__section__projects {
+    margin-top: 40px;
+    width: 45%;
+    padding: 0 10px;
+    img {
+      width: 140px;
+    } 
+    div {
+      height: 140px;
+      margin-top: 10px;
+    }
+  }
+  
+  .courses__section__titles p {
+    padding-top: 8px;
+    font-size: 18px;
+  }
+  
+  .courses__section__projects_description {
+    margin-top: 40px;
+    padding-left: 20px;
+    width: 35%;
+    font-size: 15px;
+    span {
+      font-size: 16px;
+    }
+    :first-child {
+      margin-bottom: 20px;
+    }
+  }
+  
+  .courses__item_selected {
+    box-shadow: 0 5px 10px #17bbdb;
+  }
+  
+  .courses__item_clicked {
+    box-shadow: 0 5px 10px #17bbdb;
+  }
+  
+  
+  .nextPage {
+    width: 225px;
+    height: 85px;
+  }
+}
+@media (max-width: 867px) {
+  .courses__section__projects {
+    justify-content: center;
+    width: 45%;
+    padding: 0 10px;
+    margin-top: 40px;
+    img {
+      width: 150px;
+      height: 95%;
+    } 
+    div {
+      height: 150px;
+      margin-top: 10px;
+    }
+  }
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  .main__info__ava { 
+    width: 40%;
+  }
+  
+  .main__info__ava_img2 {
+    width: 90%;
+  }
+  
+  .main__info__descr {
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  .main__info__headers__wrapper {
+    padding-right: 16%;
+    margin-top: 30px;
+  }
+  
+  .courses__section__wrapper {
+    margin-top: 30px;
+  }
+  
+  .courses__section__titles {
+    width: 23%;
+    :first-child {
+      margin-top: 0; 
+    }
+    :nth-child(7) { 
+      margin-top: 20px; 
+      padding-left: 0;
+    }
+  }
+  
+  .courses__section__projects {
+    margin-top: 10px;
+    width: 30%;
+    padding: 0;
+    img {
+      width: 120px;
+      height: 95%;
+    } 
+    div {
+      height: 120px;
+    }
+  }
+  
+  .courses__section__titles p {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  
+  .courses__section__projects_description {
+    margin-top: 10px;
+    width: 45%;
+    padding-left: 5px;
+    font-size: 14px;
+    span {
+      font-size: 16px;
+    }
+    :first-child {
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+  .nextPage {
+    width: 200px;
+    height: 69px;
+    margin-top: 75px;
+    div {
+      font-size: 14px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  main {
+    margin-top: 30px;
+  }
+
+  .main__info__wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .main__info__ava { 
+    align-self: center;
+    width: 50%;
+  }
+  
+  .main__info__ava_img2 {
+    width: 100%;
+  }
+  
+  .main__info__descr {
+    line-height: 14px;
+    font-size: 13px;
+    align-self: center;
+    margin-top: 20px;
+    width: 90%;
+  }
+  
+  .main__info__headers__wrapper {
+    display: none;
+  }
+  
+  .courses__section__wrapper {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .courses__section__titles {
+    width: 50%;
+    :first-child {
+      margin-top: 0; 
+    }
+    :nth-child(7) { 
+      margin-top: 20px; 
+      padding-left: 0;
+    }
+  }
+  
+  .courses__section__projects {
+    margin-top: 10px;
+    width: 50%;
+    padding: 0;
+    justify-content: space-between;
+    img {
+      width: 60px;
+      height: 100%;
+    } 
+    div {
+      padding: 0 5px;
+      height: 60px;
+    }
+  }
+  
+  .courses__section__titles p {
+    font-size: 15px;
+    line-height: 12px;
+    padding-left: 7px;
+  }
+  
+  .courses__section__projects_description {
+    margin-top: 30px;
+    width: 100%;
+    padding-left: 0;
+    line-height: 14px;
+    font-size: 13px;
+    span {
+      font-size: 15px;
+    }
+    :first-child {
+      margin-bottom: 15px;
+    }
+  }
+  
+  
+  .nextPage {
+    margin-top: 50px;
+    width: 150px;
+    height: 70px;
+    div {
+      font-size: 13px;
+    }
+  }
+}
