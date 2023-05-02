@@ -196,11 +196,11 @@
   }
   
   .btn {
-    width: 35%;
+    width: 45%;
     height: 38%;
     div {
-      padding: 15px 5px;
-      font-size: 17px;
+      padding: 8%;
+      font-size: 16px;
       line-height: 20px;
     }
   }
@@ -228,26 +228,6 @@
 }
 
 @media (max-width: 575px) {
-  .approach {
-    margin: 0 auto;
-    margin-top: 60px;
-    width: 90%;
-    &__header {
-      padding: 1% 8%;
-      font-size: 15px;
-    }
-    &__info > * {
-      font-size: 13.5px;
-    }
-    &__info {
-      &_features {
-        height: 50px;
-      }
-    }
-  }
-}
-
-@media (max-width: 410px) {
   .mainBtns {
     margin-top: 20vh;
     flex-direction: column;
@@ -268,6 +248,26 @@
       padding: 15px 5px;
     }
   }
+  .approach {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 90%;
+    &__header {
+      padding: 1% 8%;
+      font-size: 15px;
+    }
+    &__info > * {
+      font-size: 13.5px;
+    }
+    &__info {
+      &_features {
+        height: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 410px) {
   .approach {
     margin: 0 auto;
     margin-top: 60px;
