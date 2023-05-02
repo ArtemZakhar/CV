@@ -9,8 +9,8 @@ const initialState = {
 
 export const filtersFetch = createAsyncThunk("filters/filtersFetch", async () => {
   const { request } = useHttp();
-  // return request("https://jagged-elated-penguin.glitch.me/filters");
-  return await request("http://localhost:8000/v1/courses");
+  return request("https://jagged-elated-penguin.glitch.me/filters");
+  // return await request("http://localhost:8000/v1/courses");
 });
 
 const filtersSlice = createSlice({
