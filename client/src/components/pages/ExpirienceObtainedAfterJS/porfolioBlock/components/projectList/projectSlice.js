@@ -9,7 +9,8 @@ const initialState = {
 
 export const fetchProjects = createAsyncThunk("projects/fetchProjects", async () => {
   const { request } = useHttp();
-  return request("https://jagged-elated-penguin.glitch.me/portfolio");
+  return request("https://cv-back-362t.onrender.com");
+  // return request("https://jagged-elated-penguin.glitch.me/portfolio");
   // return await request("http://localhost:8000/v1/projects");
 });
 
