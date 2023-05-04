@@ -11,6 +11,7 @@ import "./ExpirienceObtainedAfterJS/css/style.scss";
 
 const ExpirienceObtainedAfterJS = () => {
   const { t } = useTranslation();
+
   return (
     <div>
       <div className="app__newCV">

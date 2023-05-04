@@ -8,7 +8,7 @@ import ProjectsListItem from "../projectsListItem/ProjectsListItem";
 import Spinner from "../../../../../spinner/Spinner";
 
 const ProjectList = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const filteredProjectSelector = createSelector(
     (state) => state.filters.activeFilter,
     (state) => state.projects.projects,
@@ -22,6 +22,7 @@ const ProjectList = () => {
   );
   const filtredProjects = useSelector(filteredProjectSelector);
   const projectsLoadingStatus = useSelector((state) => state.projects.projectsLoadingStatus);
+  const { activeFilter } = useSelector((state) => state.filters);
 
   const dispatch = useDispatch();
 
@@ -38,13 +39,30 @@ const ProjectList = () => {
   }
 
   const renderProjectList = (arr) => {
-    return arr.map(({ _id, ...props}) => {
+    return arr.map(({ _id, ...props }) => {
       return <ProjectsListItem key={_id} {...props} />;
     });
   };
   const elements = renderProjectList(filtredProjects);
 
-  return <div className="courses__section__projects">{elements}</div>;
+  return (
+    <div className="courses__section__projects">
+      <div
+        className="skeleton"
+        style={
+          activeFilter === "Udemy" || activeFilter === "Course On Demand"
+            ? { display: "block" }
+            : { display: "none" }
+        }
+      >
+        <div className="skeleton_item"></div>
+        <div className="skeleton_item"></div>
+        <div className="skeleton_item"></div>
+        <div className="skeleton_item"></div>
+      </div>
+      {elements}
+    </div>
+  );
 };
 
 export default ProjectList;

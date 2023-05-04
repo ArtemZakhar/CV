@@ -8,10 +8,9 @@ import "./MainPage/mainPage.scss";
 const MainPage = () => {
   const { t, i18n } = useTranslation();
   const [index, setIndex] = useState(1);
+  const [touchPosition, setTouchPosition] = useState(null);
 
-  function goToSlide(sliderIndex) {
-    setIndex(sliderIndex);
-  }
+  //slider
 
   useEffect(() => {
     const autoSliderChange = setInterval(() => {
@@ -22,13 +21,37 @@ const MainPage = () => {
     return () => clearInterval(autoSliderChange);
   }, [index]);
 
+  const goToPrevious = () => {
+    const isFirstSlide = index === 0;
+    const newIndex = isFirstSlide ? usedApproaches.length - 1 : index - 1;
+    setIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = index === usedApproaches.length - 1;
+    const newIndex = isLastSlide ? 0 : index + 1;
+    setIndex(newIndex);
+  };
+
+  function goToSlide(sliderIndex) {
+    setIndex(sliderIndex);
+  }
+
   const approachSlider = (sliderIndex) => {
     const data = usedApproaches[sliderIndex];
 
     return (
       <div className="approach__wrapper">
-        <h1 className="approach__header">{t("THE")} {i18n.language === data.name.ua.language ? data.name.ua.info : data.name.en.info} {t("H1PHRASE")}</h1>
-        <div className="approach__info">
+        <h1 className="approach__header">
+          {t("THE")}{" "}
+          {i18n.language === data.name.ua.language ? data.name.ua.info : data.name.en.info}{" "}
+          {t("H1PHRASE")}
+        </h1>
+        <div
+          className="approach__info"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+        >
           <div className="approach__info_language">
             <div>{t("LANGUAGE")}</div>
             <div>{data.language}</div>
@@ -65,6 +88,32 @@ const MainPage = () => {
 
   const sliderDots = (index) => {
     return <div className="approach__dots">{dots(index)}</div>;
+  };
+
+  //swipe event
+
+  const handleTouchStart = (e) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e) => {
+    const touchDown = touchPosition;
+    if (touchDown === null) {
+      return;
+    }
+    const currentTouch = e.touches[0].clientX;
+    const difference = touchDown - currentTouch;
+
+    if (difference > 5) {
+      goToNext();
+    }
+
+    if (difference < -5) {
+      goToPrevious();
+    }
+
+    setTouchPosition(null);
   };
 
   return (

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 const Description = ({ active, jobInfo }) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const roleDescription = jobInfo.map((item) => {
     const { id, rise } = item;
@@ -20,6 +20,7 @@ const Description = ({ active, jobInfo }) => {
     ));
     return (
       <div className="job__section__possition_descr" key={id} style={workStyle}>
+        <div className="descr__track">{t("EXPERIENCE_DESCRIPTION")}</div>
         <h2>
           {terms}
           <br />
@@ -58,6 +59,7 @@ const Description = ({ active, jobInfo }) => {
 
     return (
       <div key={languageInformationDisplay.id} className="job__section__achiev" style={workStyle}>
+        <div className="achievements__track">{t("EXPERIENCE_ACHIEVEMENTS")}</div>
         <ul>{viewAchivments}</ul>
       </div>
     );

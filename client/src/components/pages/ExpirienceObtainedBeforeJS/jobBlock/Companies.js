@@ -44,6 +44,7 @@ const Companies = ({ active, jobInfo, onActive, onToggleRise }) => {
 
   return (
     <div className="job__section__titles">
+      
       <div className={classNameforJob}>
         <span
           onClick={onActive}

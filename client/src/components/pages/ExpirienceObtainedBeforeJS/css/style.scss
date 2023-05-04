@@ -1,3 +1,21 @@
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+  height: 100%;
+  width: 55%;
+  position: absolute;
+  left: 30%;
+  top: 8%;
+  border-radius: 10px;
+}
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 40%);
+  }
+  0% {
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+
 .main__info__wrapper {
   display: flex;
   justify-content: flex-start;
@@ -30,6 +48,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
+  position: relative;
 }
 
 .job__section__titles, .study__section__titles {
@@ -144,6 +163,9 @@ span.grey {
 }
 
 @media (max-width: 991px) {
+  .skeleton {
+    width: 68%;
+  }
   .main__info__ava_img {
     width: 55%;
   }
@@ -199,7 +221,7 @@ span.grey {
 }
 
 @media (max-width: 767px) and (orientation: landscape) {
-  
+
   .main__info__ava { 
     width: 30vw;
   }
@@ -323,7 +345,6 @@ span.grey {
     width: 100%;
     font-size: 13px;
   }
-  
   
   .job__section__titles .accordion-heading span, .study__section__titles .accordion-heading span {
     font-size: 17px;

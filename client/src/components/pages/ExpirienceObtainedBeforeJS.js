@@ -12,7 +12,7 @@ import DescrEducation from "./ExpirienceObtainedBeforeJS/studyBlock/DescrEducati
 import "./ExpirienceObtainedBeforeJS/css/style.scss";
 
 const ExpirienceObtainedBeforeJS = () => {
-  const { t} = useTranslation();
+  const { t } = useTranslation();
   const { jobInfo, onToggleRise } = DataForJob();
   const { studyInfo, onToggleRiseStudy } = DataForStudy();
   const [activeList, setActiveList] = useState(false);
@@ -23,6 +23,10 @@ const ExpirienceObtainedBeforeJS = () => {
   };
   const onActiveStudy = () => {
     setActiveStudyList((activeStudyList) => !activeStudyList);
+  };
+
+  const skeletonShow = {
+    display: activeList ? "none" : "block",
   };
 
   return (
@@ -37,6 +41,7 @@ const ExpirienceObtainedBeforeJS = () => {
             active={activeList}
             onActive={onActive}
           />
+          <div className="skeleton" style={skeletonShow}></div>
           <Description jobInfo={jobInfo} active={activeList} />
         </div>
 
@@ -47,6 +52,7 @@ const ExpirienceObtainedBeforeJS = () => {
             active={activeStudyList}
             onActiveStudy={onActiveStudy}
           />
+          <div className="skeleton" style={skeletonShow}></div>
           <DescrEducation studyInfo={studyInfo} active={activeStudyList} />
         </div>
       </div>

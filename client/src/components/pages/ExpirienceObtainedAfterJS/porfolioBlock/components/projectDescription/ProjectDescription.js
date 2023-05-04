@@ -2,13 +2,14 @@ import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 const ProjectDescription = () => {
-  const {t, i18n} = useTranslation();
+  const { t, i18n } = useTranslation();
   const { projects, activeCourse } = useSelector((state) => state.projects);
   const { activeFilter } = useSelector((state) => state.filters);
 
   const viewProject = (arr, activeFilter) => {
     return arr.map(({ _id, name, description, githubLink, gDiskLink, course }) => {
-      const correctLanguageData = i18n.language === description.ua.language ? description.ua.descr : description.en.descr;
+      const correctLanguageData =
+        i18n.language === description.ua.language ? description.ua.descr : description.en.descr;
       const courseName = course.name;
       if (activeCourse === name && activeFilter === courseName) {
         return (
@@ -36,7 +37,11 @@ const ProjectDescription = () => {
   };
   const elements = viewProject(projects, activeFilter);
 
-  return <div>{elements}</div>;
+  return (
+    <div>
+      {elements}
+    </div>
+  );
 };
 
 export default ProjectDescription;
