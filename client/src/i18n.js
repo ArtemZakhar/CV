@@ -24,7 +24,7 @@ i18n
 
     keySeparator: false,
     //disabled in production
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },
