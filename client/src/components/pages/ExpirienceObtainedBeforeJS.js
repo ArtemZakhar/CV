@@ -28,6 +28,9 @@ const ExpirienceObtainedBeforeJS = () => {
   const skeletonShow = {
     display: activeList ? "none" : "block",
   };
+  const skeletonShowStudy = {
+    display: activeStudyList ? "none" : "block",
+  };
 
   return (
     <div>
@@ -52,7 +55,7 @@ const ExpirienceObtainedBeforeJS = () => {
             active={activeStudyList}
             onActiveStudy={onActiveStudy}
           />
-          <div className="skeleton" style={skeletonShow}></div>
+          <div className="skeleton" style={skeletonShowStudy}></div>
           <DescrEducation studyInfo={studyInfo} active={activeStudyList} />
         </div>
       </div>
