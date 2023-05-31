@@ -1,9 +1,9 @@
-import i18n from "i18next";
-import detector from "i18next-browser-languagedetector";
-import { initReactI18next } from "react-i18next";
+import i18n from 'i18next';
+import detector from 'i18next-browser-languagedetector';
+import { initReactI18next } from 'react-i18next';
 
-import translationEN from "./locales/en/en.json";
-import translationUA from "./locales/ua/ua.json";
+import translationEN from './locales/en/en.json';
+import translationUA from './locales/ua/ua.json';
 
 const resources = {
   ua: {
@@ -19,8 +19,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "ua",
-    supportedLngs: ["en", "ua"],
+    fallbackLng: 'ua',
+    supportedLngs: ['en', 'ua'],
 
     keySeparator: false,
     //disabled in production
