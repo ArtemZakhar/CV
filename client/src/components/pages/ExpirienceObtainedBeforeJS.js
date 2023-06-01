@@ -1,15 +1,16 @@
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import DataForJob from "./ExpirienceObtainedBeforeJS/jobBlock/DataForJob";
-import MainInfo from "./ExpirienceObtainedBeforeJS/MainInfo";
-import Companies from "./ExpirienceObtainedBeforeJS/jobBlock/Companies";
-import Description from "./ExpirienceObtainedBeforeJS/jobBlock/Description";
-import DataForStudy from "./ExpirienceObtainedBeforeJS/studyBlock/DataForStudy";
-import Education from "./ExpirienceObtainedBeforeJS/studyBlock/Education";
-import DescrEducation from "./ExpirienceObtainedBeforeJS/studyBlock/DescrEducation";
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import DataForJob from './ExpirienceObtainedBeforeJS/jobBlock/DataForJob';
+import MainInfo from './ExpirienceObtainedBeforeJS/MainInfo';
+import Companies from './ExpirienceObtainedBeforeJS/jobBlock/Companies';
+import Description from './ExpirienceObtainedBeforeJS/jobBlock/Description';
+import DataForStudy from './ExpirienceObtainedBeforeJS/studyBlock/DataForStudy';
+import Education from './ExpirienceObtainedBeforeJS/studyBlock/Education';
+import DescrEducation from './ExpirienceObtainedBeforeJS/studyBlock/DescrEducation';
 
-import "./ExpirienceObtainedBeforeJS/css/style.scss";
+import './MainPage/mainPage.scss';
+import './ExpirienceObtainedBeforeJS/css/style.scss';
 
 const ExpirienceObtainedBeforeJS = () => {
   const { t } = useTranslation();
@@ -26,42 +27,42 @@ const ExpirienceObtainedBeforeJS = () => {
   };
 
   const skeletonShow = {
-    display: activeList ? "none" : "block",
+    display: activeList ? 'none' : 'block',
   };
   const skeletonShowStudy = {
-    display: activeStudyList ? "none" : "block",
+    display: activeStudyList ? 'none' : 'block',
   };
 
   return (
     <div>
-      <div className="app__oldCV">
+      <div className='app__oldCV'>
         <MainInfo />
 
-        <div className="job__section__wrapper mb-10">
+        <div className='job__section__wrapper mb-10'>
           <Companies
             jobInfo={jobInfo}
             onToggleRise={onToggleRise}
             active={activeList}
             onActive={onActive}
           />
-          <div className="skeleton" style={skeletonShow}></div>
+          <div className='skeleton' style={skeletonShow}></div>
           <Description jobInfo={jobInfo} active={activeList} />
         </div>
 
-        <div className="study__section__wrapper mb-10">
+        <div className='study__section__wrapper mb-10'>
           <Education
             studyInfo={studyInfo}
             onToggleRiseStudy={onToggleRiseStudy}
             active={activeStudyList}
             onActiveStudy={onActiveStudy}
           />
-          <div className="skeleton" style={skeletonShowStudy}></div>
+          <div className='skeleton' style={skeletonShowStudy}></div>
           <DescrEducation studyInfo={studyInfo} active={activeStudyList} />
         </div>
       </div>
 
-      <Link to={`/after`} className="btn nextPage">
-        <div>{t("AFTER")}</div>
+      <Link to={`/after`} className='btn nextPage'>
+        <div>{t('AFTER')}</div>
       </Link>
     </div>
   );

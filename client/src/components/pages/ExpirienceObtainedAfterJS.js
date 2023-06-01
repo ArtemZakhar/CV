@@ -7,6 +7,7 @@ import CourseFilters from './ExpirienceObtainedAfterJS/porfolioBlock/components/
 import CourseDescription from './ExpirienceObtainedAfterJS/porfolioBlock/components/courseDescription/CourseDescription';
 import ProjectDescription from './ExpirienceObtainedAfterJS/porfolioBlock/components/projectDescription/ProjectDescription';
 
+import './MainPage/mainPage.scss';
 import './ExpirienceObtainedAfterJS/css/style.scss';
 
 const ExpirienceObtainedAfterJS = () => {

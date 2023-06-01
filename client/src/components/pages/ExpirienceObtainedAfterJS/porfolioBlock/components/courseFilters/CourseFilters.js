@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { activeFilterChanged, filtersFetch } from './CourseFilterSlice';
 
+import '../../../../ExpirienceObtainedAfterJS/css/style.scss';
+
 const CourseFilters = () => {
-  const { filters, activeFilter } = useSelector(
-    (state) => state.filters
-  );
+  const { filters, activeFilter } = useSelector((state) => state.filters);
   const dispatch = useDispatch();
 
   useEffect(() => {
