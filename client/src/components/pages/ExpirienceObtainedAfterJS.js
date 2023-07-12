@@ -10,8 +10,6 @@ import ProjectDescription from './ExpirienceObtainedAfterJS/porfolioBlock/compon
 import './MainPage/mainPage.scss';
 import './ExpirienceObtainedAfterJS/css/style.scss';
 
-//message to lulu
-
 const ExpirienceObtainedAfterJS = () => {
   const { t } = useTranslation();
 
