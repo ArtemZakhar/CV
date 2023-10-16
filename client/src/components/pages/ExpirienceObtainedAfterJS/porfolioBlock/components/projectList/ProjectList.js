@@ -34,7 +34,7 @@ const ProjectList = () => {
     dispatch(fetchProjects());
 
     // eslint-disable-next-line
-  }, [filtredProjects]);
+  }, []);
 
   if (projectsLoadingStatus === 'loading') {
     return <Spinner />;
