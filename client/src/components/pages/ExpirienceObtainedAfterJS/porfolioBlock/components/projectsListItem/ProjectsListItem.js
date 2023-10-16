@@ -5,7 +5,6 @@ import { activeProject } from './../projectList/projectSlice';
 const ProjectsListItem = ({ _id, image, name }) => {
   const { activeFilter } = useSelector((state) => state.filters);
   const { activeCourse } = useSelector((state) => state.projects);
-
   const dispatch = useDispatch();
 
   let chosenProject = null;
