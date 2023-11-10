@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"npx json-server portfolio.json --port 3001\"",
-    "build": "react-scripts build",
+    "build": "set BUILD_PATH=../server/public&& react-scripts build",
     "postbuild": "node iisConfig/copyIISConfig.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
