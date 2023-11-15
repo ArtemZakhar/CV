@@ -9,7 +9,7 @@ const ProjectDescription = () => {
   const viewProject = (arr, activeFilter) => {
     return arr.map(({ _id, name, description, githubLink, gDiskLink, course }) => {
       const correctLanguageData =
-        i18n.language === 'ua' ? description.ua.descr : description.en.descr;
+        i18n.language === 'ua' ? description.uk.descr : description.en.descr;
       const courseName = course.name;
       if (activeCourse === name && activeFilter === courseName) {
         return (
