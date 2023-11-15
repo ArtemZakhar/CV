@@ -8,7 +8,7 @@ const CourseDescription = () => {
   const viewDescr = (arr) => {
 
     return arr.map(({_id, name, description}) => {
-      const correctLanguageData = i18n.language === 'ua' ? description.ua.descr : description.en.descr;
+      const correctLanguageData = i18n.language === 'ua' ? description.uk.descr : description.en.descr;
       if (activeFilter === name) {
         return <div key={_id}>
           {t("COURSE")}: <span>{name}</span> <br/><br/>
